@@ -1,0 +1,58 @@
+/*
+Explanation of the different parts:
+
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+
+rem == Relative to font-size of the root element
+root element (16px for all modern browsers)
+
+ */
+
+.large-hero {
+    position: relative;
+
+    /* center slogan div horizontally*/
+  &__text-content {
+    position: absolute;
+    /*align top edge of div at 50% 
+    height of containing container*/
+    top: 50%;
+    /*push content 50% of 
+    it's own height in -Y direction*/
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+  &__title {
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 4.8rem;
+    margin: 0;
+}
+
+  &__subtitle {
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 2.9rem;
+    margin: 0;
+}
+
+  &__description {
+      font-size: 1.8rem;
+      color: #FFF;
+      font-weight: 100;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+}
+
+
+
